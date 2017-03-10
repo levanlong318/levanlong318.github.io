@@ -101,7 +101,7 @@
             // alert('请在支付宝钱包内运行');
             console.log("no Zalo Pay");
         } else {
-            ZaloPay.payOrder({
+            var result = ZaloPay.payOrder({
                 appid:3,
                 apptransid:170209151138918,
                 appuser:'pmqc',
@@ -113,7 +113,11 @@
                 mac:'ae48c017dced86f498377999d9f31d094a76bda1bf7d2a78fd3f0c02fb4b01a9'
             }, function() {
             //成功震动的情况
-            });
+            }, cb);
+            console.log("payorder result:" + result);
+            console.log("payorder result.error:" + result.error);
+            console.log("payorder result.errorMessage:" + result.errorMessage);
+            console.log("payorder result.data:" + result.data);
         }
         });
   });

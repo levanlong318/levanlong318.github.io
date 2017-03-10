@@ -565,8 +565,8 @@
         ZaloPay.call("vibrate", opt, fn);
     };
 
-	ZaloPay.payOrder = function (opt, fn) {
-        ZaloPay.call("payOrder", opt, fn);
+	ZaloPay.payOrder = function (opt, fn, cb) {
+        ZaloPay.call("payOrder", opt, fn, cb);
     };
 
     ZaloPay.network = {};
